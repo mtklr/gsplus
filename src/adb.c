@@ -36,6 +36,8 @@ extern byte *g_slow_memory_ptr;
 extern byte *g_memory_ptr;
 extern word32 g_mem_size_total;
 
+extern void quitEmulator();
+
 enum {
   ADB_IDLE = 0,
   ADB_IN_CMD,
@@ -1714,8 +1716,7 @@ void adb_physical_key_update(int a2code, int is_up) {
       case kVK_F4:           /* F4 - emulator config panel */
         if (CMD_DOWN) {
           glog("Alt-F4 Quit!");
-          iwm_shut();
-          my_exit(1);
+	  quitEmulator();
         }
         else
         {
