@@ -144,6 +144,7 @@ void do_clock_data(void);
 void config_init_menus(Cfg_menu *menuptr);
 void config_init(void);
 void cfg_exit(void);
+void cfg_quit(void);
 void cfg_toggle_config_panel(void);
 void cfg_text_screen_dump(void);
 void cfg_iwreset(void);
