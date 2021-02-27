@@ -218,6 +218,8 @@ void display_rawnet_menu(const char *name, const char **value);
 
 extern Cfg_menu g_cfg_main_menu[];
 
+extern void quitEmulator();
+
 #define KNMP(a)         &a, #a, 0
 
 // This first menu is not a menu, but a list of config options that are
@@ -497,6 +499,8 @@ Cfg_menu g_cfg_main_menu[] = {
   { "", 0, 0, 0, 0 },
   { "Save changes to configuration file", 0, 0, 0, CFGTYPE_FUNC, config_write_config_gsplus_file },
   { "", 0, 0, 0, 0 },
+  { "Quit GSplus", 0, 0, 0, CFGTYPE_FUNC, cfg_quit },
+  { "", 0, 0, 0, 0 },
   { "Exit Config (or press F4)", 0, 0, 0, CFGTYPE_FUNC, cfg_exit },
   { 0, 0, 0, 0, 0 },
 };
@@ -656,6 +660,11 @@ void cfg_exit()      {
   if(g_rom_version >= 1) {
     g_config_control_panel = 0;
   }
+}
+
+void cfg_quit()      {
+  quitEmulator();
+  exit(0);
 }
 
 void cfg_toggle_config_panel()      {
