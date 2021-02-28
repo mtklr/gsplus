@@ -15,6 +15,7 @@
 #define SAMPLE_SIZE		2
 #define NUM_CHANNELS		2
 #define SAMPLE_CHAN_SIZE	(SAMPLE_SIZE * NUM_CHANNELS)
+#define NUM_SAMPLES		2048
 
 STRUCT(Doc_reg) {
 	double	dsamp_ev;
