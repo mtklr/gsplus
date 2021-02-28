@@ -1734,11 +1734,7 @@ void adb_physical_key_update(int a2code, int is_up) {
         }
         break;
       case kVK_F6:           /* F6 - emulator speed */
-        if(SHIFT_DOWN) {
-          halt2_printf("Shift-F6 pressed\n");
-        } else {
           adb_increment_speed();
-        }
         break;
       case kVK_F7:           /* F7 - fast disk emul */
         g_fast_disk_emul = !g_fast_disk_emul;
