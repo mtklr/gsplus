@@ -1708,8 +1708,7 @@ void adb_physical_key_update(int a2code, int is_up) {
 
   if(special && !is_up) {
     switch(special) {
-      case kVK_F3:           /* F3 - screenshot */
-        g_screenshot_requested = 1;
+      case kVK_F3:           /* F3 - */
         break;
       case kVK_F4:           /* F4 - emulator config panel */
         if (CMD_DOWN) {
