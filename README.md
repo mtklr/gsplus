@@ -8,7 +8,7 @@ An Apple IIgs emulator based on KEGS
     brew install cmake pkg-config re2c sdl2 sdl2_image freetype
 
 ## Linux dependencies
-    apt-get install re2c libsdl2-dev libsdl2-image-dev libfreetype6-dev libpcap0.8-dev
+    apt-get install libreadline-dev re2c libsdl2-dev libsdl2-image-dev libfreetype6-dev libpcap0.8-dev
 
 ## WIN32 dependencies
 Install MSYS2 (not MSYS, not cygwin)
